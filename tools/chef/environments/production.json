@@ -9,7 +9,7 @@
       "sites": {
         "magentoce": {
           "server_name": "178.62.126.214",
-          "docroot": "/var/www/178.62.126.214/public",
+          "docroot": "/var/www/178.62.126.214/current/public",
           "protocols": ["http", "https"],
           "restricted_dirs":  [
             "/app/",
@@ -37,7 +37,7 @@
         "username": "magento",
         "database": "magentodb"
       },
-      "dir": "/var/www/178.62.126.214"
+      "dir": "/var/www/178.62.126.214/current/public"
     },
 
     "packages": [ "git" ]
