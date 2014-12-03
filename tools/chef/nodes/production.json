@@ -8,7 +8,7 @@
     "role[web-nginx]",
     "role[redis]",
     "role[memcache]",
-    "role[web-magento]",
+    "role[web-magento-live]",
     "recipe[config-driven-helper::packages]"
   ],
   "environment": "production"
