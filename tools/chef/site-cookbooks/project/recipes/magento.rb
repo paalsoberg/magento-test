@@ -1,9 +1,3 @@
-if node['ssl_certs_config']['encrypted']
-  encrypted_data_bag_merge "ssl_certs/#{node['ssl_certs_config']['data_bag_item']}"
-else
-  data_bag_merge "ssl_certs/#{node['ssl_certs_config']['data_bag_item']}"
-end
-
 ::Chef::Recipe.send(:include, ConfigDrivenHelper::Util)
 
 node['nginx']['sites'].each_pair do |name, siteMash|
