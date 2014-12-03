@@ -1,8 +1,8 @@
 
-if site['capistrano']
+if node['magento']['capistrano']['enabled'] == true
       config_path = "#{site['capistrano']['deploy_to']}/shared/public"
     else
-      config_path = site['docroot']
+      config_path = node['docroot']
     end
 
 directory config_path do
