@@ -1,0 +1,53 @@
+{
+  "name": "production",
+  "description": "",
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+
+  "default_attributes": {
+    "nginx": {
+      "sites": {
+        "magentoce": {
+          "server_name": "178.62.126.214",
+          "docroot": "/var/www/178.62.126.214/public",
+          "protocols": ["http", "https"],
+          "restricted_dirs":  [
+            "/app/",
+            "/includes/",
+            "/lib/",
+            "/media/downloadable/",
+            "/pkginfo/",
+            "/report/config.xml",
+            "/var/"
+          ]
+        }
+      }
+    },
+
+    "mysql": {
+      "users": {
+        "magento": {
+          "database_name": "magentodb"
+        }
+      }
+    },
+
+    "magento": {
+      "db": {
+        "username": "magento",
+        "database": "magentodb"
+      },
+      "dir": "/var/www/178.62.126.214"
+    },
+
+    "packages": [ "git" ]
+  },
+
+  "override_attributes": {
+    "data-bag-merge": {
+      "environments": {
+        "encrypted": false
+      }
+    }
+  }
+}
