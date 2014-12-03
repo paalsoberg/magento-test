@@ -1,5 +1,3 @@
-::Chef::Recipe.send(:include, ConfigDrivenHelper::Util)
-
 node['nginx']['sites'].each_pair do |name, siteMash|
   site = immutablemash_to_hash(siteMash)
 
