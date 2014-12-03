@@ -1,5 +1,5 @@
 
- if site['capistrano']
+if site['capistrano']
       config_path = "#{site['capistrano']['deploy_to']}/shared/public"
     else
       config_path = site['docroot']
@@ -15,6 +15,6 @@ template "#{config_path}/app/etc/local.xml" do
   source "local.xml.erb"
   mode 0644
   variables({
-    :magento => node['magento']
+    :magento => magento
   })
 end
